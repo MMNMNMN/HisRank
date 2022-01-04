@@ -1,0 +1,2 @@
+model_checkpoint_path: "citeseer_model.ckpt-200"
+all_model_checkpoint_paths: "citeseer_model.ckpt-200"
