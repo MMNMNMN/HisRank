@@ -1,4 +1,5 @@
 ## 基于浏览记录的个性化节点推荐算法
+图卷积模型代码采用Thomas等人的工作，GitHub：https://github.com/tkipf/gcn
 ### 实验环境
 - python==3.6.13
 - tensorflow==1.10
