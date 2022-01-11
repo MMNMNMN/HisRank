@@ -10,7 +10,7 @@ if __name__ == "__main__":
     plt.rcParams['font.sans-serif'] = ['SimHei']
     plt.rcParams['axes.unicode_minus'] = True
 
-    plt.figure(figsize=(12, 4), dpi=150)
+    plt.figure(figsize=(18, 5), dpi=150)
     plt.figure(1)
 
     x_axis = ["F@50", "F@200", "F@400", "F@600"]
@@ -27,8 +27,13 @@ if __name__ == "__main__":
     plt.plot(x_axis, cora_lr, color="green", linestyle="-", label="LR")
     plt.plot(x_axis, cora_wpr, color="m", linestyle=":", label="WPR")
     plt.plot(x_axis, cora_his, color="red", linestyle="-.", label="His")
-    plt.title("Cora [D]", fontsize=15)
+
+    plt.xticks(size=16)
+    plt.yticks(size=16)
+    plt.title("Cora [D]", fontsize=18)
     plt.legend()
+    plt.xlabel("F@k", fontsize=18)
+    plt.ylabel("F-score", fontsize=15)
 
 
     ax2 = plt.subplot(132)
@@ -42,8 +47,13 @@ if __name__ == "__main__":
     plt.plot(x_axis, citeseer_lr, color="green", linestyle="-", label="LR")
     plt.plot(x_axis, citeseer_wpr, color="m", linestyle=":", label="WPR")
     plt.plot(x_axis, citeseer_his, color="red", linestyle="-.", label="His")
-    plt.title("Citeseer [D]", fontsize=15)
+
+    plt.xticks(size=16)
+    plt.yticks(size=16)
+    plt.title("Citeseer [D]", fontsize=18)
     plt.legend()
+    plt.xlabel("F@k", fontsize=18)
+    plt.ylabel("F-score", fontsize=15)
 
 
     ax3 = plt.subplot(133)
@@ -57,8 +67,13 @@ if __name__ == "__main__":
     plt.plot(x_axis, pubmed_lr, color="green", linestyle="-", label="LR")
     plt.plot(x_axis, pubmed_wpr, color="m", linestyle=":", label="WPR")
     plt.plot(x_axis, pubmed_his, color="red", linestyle="-.", label="His")
-    plt.title("PubMed [A]", fontsize=15)
+
+    plt.xticks(size=16)
+    plt.yticks(size=16)
+    plt.title("PubMed [A]", fontsize=18)
     plt.legend()
+    plt.xlabel("F@k", fontsize=18)
+    plt.ylabel("F-score", fontsize=15)
 
     # plt.show()
     plt.savefig(fname="single.png", bbox_inches='tight')

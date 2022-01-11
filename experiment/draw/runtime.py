@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     width_bar = 0.2
 
-    plt.figure(dpi=100)
+    plt.figure(dpi=150)
 
 
     x_1 = list(range(len(x)))
@@ -33,8 +33,10 @@ if __name__ == "__main__":
     plt.bar(x_2, y_citeseer, width=width_bar, label="Citeseer")
     plt.bar(x_3, y_pubmed, width=width_bar, label="Pubmed")
 
-    plt.xlabel("算法", fontsize=12)
-    plt.ylabel("运行时间 单位：秒", fontsize=12)
+    plt.xlabel("算法", fontsize=18)
+    plt.ylabel("运行时间 单位：秒", fontsize=18)
+    plt.xticks(size=16)
+    plt.yticks(size=16)
 
     plt.legend()
-    plt.savefig(fname="runtime.png", bbox_inches='tight')
+    plt.savefig(fname="runtime.png", bbox_inches = 'tight')
